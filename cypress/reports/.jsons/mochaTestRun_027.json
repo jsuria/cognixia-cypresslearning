@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-04-25T08:34:53.321Z",
+    "end": "2023-04-25T08:35:09.580Z",
+    "duration": 16259,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d9c1989c-d0b9-493e-be7f-93c10d631c05",
+      "title": "",
+      "fullFile": "cypress/e2e/nopComm/command_demo.cy.js",
+      "file": "cypress/e2e/nopComm/command_demo.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e42847a1-0719-44b3-97b9-fdee7fe94eb9",
+          "title": "Command demo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Clicking link with given text",
+              "fullTitle": "Command demo Clicking link with given text",
+              "timedOut": null,
+              "duration": 2725,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos\",\n  \"value\": \"cypress/e2e/nopComm/command_demo.cy.js\"\n}",
+              "code": "cy.ClickLinkText({\n  url: \"https://demo.nopcommerce.com/\",\n  link_text: \"MacBook Pro 13-inch\"\n});\ncy.url().should('contain', 'apple-macbook-pro-13-inch');",
+              "err": {},
+              "uuid": "728b2e7e-b3ce-4fab-a20e-e478aecacdf4",
+              "parentUUID": "e42847a1-0719-44b3-97b9-fdee7fe94eb9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Drag and Drop demo",
+              "fullTitle": "Command demo Drag and Drop demo",
+              "timedOut": null,
+              "duration": 2650,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos\",\n  \"value\": \"cypress/e2e/nopComm/command_demo.cy.js\"\n}",
+              "code": "cy.DragDropElement({\n  url: \"http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html\",\n  drag_element: '//div[@id=\"dropContent\"]/descendant::div[text()=\"Stockholm\"]',\n  drop_element: 'div#countries',\n  force: true,\n  xpath: true\n});",
+              "err": {},
+              "uuid": "cde1b267-3712-43d7-9df8-9f008e4844cb",
+              "parentUUID": "e42847a1-0719-44b3-97b9-fdee7fe94eb9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Editor",
+              "fullTitle": "Command demo Editor",
+              "timedOut": null,
+              "duration": 6045,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos\",\n  \"value\": \"cypress/e2e/nopComm/command_demo.cy.js\"\n}",
+              "code": "cy.IframeEditorAuto({\n  url: 'http://the-internet.herokuapp.com/iframe',\n  editor_text: \"Hello world!\",\n  iframe: '#mce_0_ifr',\n  editor_button: 'button[title=\"Bold\"]'\n});",
+              "err": {},
+              "uuid": "f71d4f9b-c0bc-476e-84bf-1d2728696f4d",
+              "parentUUID": "e42847a1-0719-44b3-97b9-fdee7fe94eb9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "728b2e7e-b3ce-4fab-a20e-e478aecacdf4",
+            "cde1b267-3712-43d7-9df8-9f008e4844cb",
+            "f71d4f9b-c0bc-476e-84bf-1d2728696f4d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11420,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochaTestRun",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "reportFilename": "mochaTestRun",
+        "charts": true,
+        "reportPageTitle": "Mocha Test Suite",
+        "html": false,
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

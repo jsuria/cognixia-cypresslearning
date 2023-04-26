@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-04-25T03:21:39.584Z",
+    "end": "2023-04-25T03:21:42.260Z",
+    "duration": 2676,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "11ccf8a5-4bcf-4665-a7e2-59be12eaddf3",
+      "title": "",
+      "fullFile": "cypress/e2e/NOPCommApp.cy.js",
+      "file": "cypress/e2e/NOPCommApp.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3d5cb997-e1ff-469b-9c0d-887d88c3e842",
+          "title": "Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC_01",
+              "fullTitle": "Suite TC_01",
+              "timedOut": null,
+              "duration": 1527,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos\",\n  \"value\": \"cypress/e2e/NOPCommApp.cy.js\"\n}",
+              "code": "//launch application\ncy.visit(x.appURL_QA);\n//validation Step  ---- URL\ncy.url().should('eq', x.appURL_QA);\n//Validation step ---- Title\ncy.title().should('eq', 'Your store. Login');\ncy.title().should('not.eq', 'Dashboard / nopCommerce administration'); //negative testing\ncy.title().should('contain', 'Login');\ncy.title().should('not.contain', 'Admin'); //negative testing\ncy.title().should('include', 'Login').and('eq', 'Your store. Login').and('contain', 'Login').and('not.contain', 'google');",
+              "err": {},
+              "uuid": "deda1fd6-eb13-493f-8887-d7b7def7f5ab",
+              "parentUUID": "3d5cb997-e1ff-469b-9c0d-887d88c3e842",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "deda1fd6-eb13-493f-8887-d7b7def7f5ab"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1527,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochaTestRun",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "reportFilename": "mochaTestRun",
+        "charts": true,
+        "reportPageTitle": "Mocha Test Suite",
+        "html": false,
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

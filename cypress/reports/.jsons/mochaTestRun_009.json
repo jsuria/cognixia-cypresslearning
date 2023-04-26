@@ -1,0 +1,134 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-04-25T06:12:12.225Z",
+    "end": "2023-04-25T06:12:20.817Z",
+    "duration": 8592,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "79498bae-c161-4f7f-8af8-a1cbfc8b91f9",
+      "title": "",
+      "fullFile": "cypress/e2e/nopComm/command_demo.cy.js",
+      "file": "cypress/e2e/nopComm/command_demo.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "15ee7e5f-559c-4592-bda0-2156009b27cc",
+          "title": "Command demo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Clicking link with given text",
+              "fullTitle": "Command demo Clicking link with given text",
+              "timedOut": null,
+              "duration": 3151,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos\",\n  \"value\": \"cypress/e2e/nopComm/command_demo.cy.js\"\n}",
+              "code": "cy.ClickLinkText({\n  url: \"https://demo.nopcommerce.com/\",\n  link_text: \"MacBook Pro 13-inch\"\n});\ncy.url().should('contain', 'apple-macbook-pro-13-inch');",
+              "err": {},
+              "uuid": "59bfc65d-b1a3-473e-8a3e-fd944ba1b843",
+              "parentUUID": "15ee7e5f-559c-4592-bda0-2156009b27cc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Drag and Drop demo",
+              "fullTitle": "Command demo Drag and Drop demo",
+              "timedOut": null,
+              "duration": 2158,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos\",\n    \"value\": \"cypress/e2e/nopComm/command_demo.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        {\n          \"title\": \"Failed screenshot\",\n          \"value\": \"/command_demo.cy.js/Command demo -- Drag and Drop demo (failed).png\"\n        }\n      ]\n    ]\n  }\n]",
+              "code": "cy.DragDropElement({\n  url: \"http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html\",\n  drag_element: '//div[@id=\"dropContent\"]/descendant::div[text()=\"Stockholm\"]',\n  drop_element: '//div[@id=\"countries\"]',\n  force: true\n});",
+              "err": {
+                "message": "Error: Syntax error, unrecognized expression: //div[@id=\"dropContent\"]/descendant::div[text()=\"Stockholm\"]",
+                "estack": "Error: Syntax error, unrecognized expression: //div[@id=\"dropContent\"]/descendant::div[text()=\"Stockholm\"]\n    at Sizzle.error (http://www.dhtmlgoodies.com/__cypress/runner/cypress_runner.js:100945:8)\n    at Sizzle.tokenize (http://www.dhtmlgoodies.com/__cypress/runner/cypress_runner.js:101597:11)\n    at Sizzle.select (http://www.dhtmlgoodies.com/__cypress/runner/cypress_runner.js:102024:20)\n    at Function.Sizzle [as find] (http://www.dhtmlgoodies.com/__cypress/runner/cypress_runner.js:100249:9)\n    at jQuery.fn.init.find (http://www.dhtmlgoodies.com/__cypress/runner/cypress_runner.js:102280:11)\n    at new jQuery.fn.init (http://www.dhtmlgoodies.com/__cypress/runner/cypress_runner.js:102395:40)\n    at Object.query (http://www.dhtmlgoodies.com/__cypress/runner/cypress_runner.js:174042:10)\n    at $Cy.$$ (http://www.dhtmlgoodies.com/__cypress/runner/cypress_runner.js:154624:65)\n    at <unknown> (http://www.dhtmlgoodies.com/__cypress/runner/cypress_runner.js:151050:18)\n    at Object.subjectFn (http://www.dhtmlgoodies.com/__cypress/runner/cypress_runner.js:161894:16)\n    at $Cy.verifyUpcomingAssertions (http://www.dhtmlgoodies.com/__cypress/runner/cypress_runner.js:143118:31)\n    at onRetry (http://www.dhtmlgoodies.com/__cypress/runner/cypress_runner.js:161885:15)\n    at retryQuery (http://www.dhtmlgoodies.com/__cypress/runner/cypress_runner.js:161898:10)\n    at <unknown> (http://www.dhtmlgoodies.com/__cypress/runner/cypress_runner.js:162048:17)\n    at tryCatcher (http://www.dhtmlgoodies.com/__cypress/runner/cypress_runner.js:20941:23)\n    at Promise._settlePromiseFromHandler (http://www.dhtmlgoodies.com/__cypress/runner/cypress_runner.js:18876:31)\n    at Promise._settlePromise (http://www.dhtmlgoodies.com/__cypress/runner/cypress_runner.js:18933:18)\n    at Promise._settlePromiseCtx (http://www.dhtmlgoodies.com/__cypress/runner/cypress_runner.js:18970:10)\n    at _drainQueueStep (http://www.dhtmlgoodies.com/__cypress/runner/cypress_runner.js:15652:12)\n    at _drainQueue (http://www.dhtmlgoodies.com/__cypress/runner/cypress_runner.js:15641:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://www.dhtmlgoodies.com/__cypress/runner/cypress_runner.js:15657:5)\n    at Async.drainQueues (http://www.dhtmlgoodies.com/__cypress/runner/cypress_runner.js:15527:14)",
+                "diff": null
+              },
+              "uuid": "f7a13738-dfda-43f3-a6b8-aa888008ae82",
+              "parentUUID": "15ee7e5f-559c-4592-bda0-2156009b27cc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "59bfc65d-b1a3-473e-8a3e-fd944ba1b843"
+          ],
+          "failures": [
+            "f7a13738-dfda-43f3-a6b8-aa888008ae82"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5309,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochaTestRun",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "reportFilename": "mochaTestRun",
+        "charts": true,
+        "reportPageTitle": "Mocha Test Suite",
+        "html": false,
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

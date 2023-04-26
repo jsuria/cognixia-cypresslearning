@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-04-24T06:42:04.110Z",
+    "end": "2023-04-24T06:42:12.673Z",
+    "duration": 8563,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2172a881-a164-40d1-a1a7-cbc54b0246fc",
+      "title": "",
+      "fullFile": "cypress/e2e/nopComm/midterm_nopcommerce.cy.js",
+      "file": "cypress/e2e/nopComm/midterm_nopcommerce.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d3fca943-6835-4ee2-932e-1660ba6876c3",
+          "title": "midterm - nopcommerce login validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login and validation",
+              "fullTitle": "midterm - nopcommerce login validation login and validation",
+              "timedOut": null,
+              "duration": 7483,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://admin-demo.nopcommerce.com/login');\ncy.xpath(\"//input[@id='Email']\").should('be.visible').clear().type('admin@yourstore.com');\ncy.xpath(\"//input[@id='Password']\").should('be.visible').clear().type('admin');\n// Ensure Remember Me checkbox is unchecked\ncy.xpath(\"//input[@id='RememberMe']\").should('be.visible').should('not.be.checked').check();\ncy.xpath(\"//button\").should('be.visible').click();\n// Validate window/tab title\ncy.title().should('contain', 'Dashboard / nopCommerce administration');\n// Validate the page title header\ncy.xpath(\"//div[@class='content-header']\").should('be.visible').should('contain', 'Dashboard');\n// Optional: Customer Menu and searching user\ncy.xpath(\"//a[@class='nav-link']\").should('exist').contains('Customers').click({\n  force: true\n});\ncy.xpath(\"//a[@href='/Admin/Customer/List']\").should('exist').contains('Customers').click({\n  force: true\n});\ncy.xpath(\"//input[@id='SearchEmail']\").should('be.visible').clear().type('victoria_victoria@nopCommerce.com');\ncy.xpath(\"//button[@id='search-customers']\").should('be.visible').click();\ncy.screenshot();",
+              "err": {},
+              "uuid": "321f95ee-a3df-4d66-b633-58b8762b4638",
+              "parentUUID": "d3fca943-6835-4ee2-932e-1660ba6876c3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "321f95ee-a3df-4d66-b633-58b8762b4638"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7483,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "charts": true,
+        "reportPageTitle": "My Test Suite",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

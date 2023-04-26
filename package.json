@@ -4,12 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "execChromeHeaded": "npx cypress run --browser chrome --spec cypress/e2e/nopComm/midterm_nopcommerce.cy.js --headed --reporter mochawesome",
+    "execChromeHeadless": "npx cypress run --browser chrome --spec cypress/e2e/nopComm/midterm_nopcommerce.cy.js --reporter mochawesome",
+    "execFirefoxHeaded": "npx cypress run --browser firefox --spec cypress/e2e/nopComm/midterm_nopcommerce.cy.js --headed --reporter mochawesome",
+    "execFirefoxHeadless": "npx cypress run --browser firefox --spec cypress/e2e/nopComm/midterm_nopcommerce.cy.js --reporter mochawesome"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.9.0"
+    "@4tw/cypress-drag-drop": "^2.2.3",
+    "cypress": "^12.10.0",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.4.0",
+    "cypress-xpath": "^2.0.1"
   }
 }

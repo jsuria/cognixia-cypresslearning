@@ -1,0 +1,91 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-04-25T03:21:24.689Z",
+    "end": "2023-04-25T03:21:30.232Z",
+    "duration": 5543,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0eea4371-7c24-40ea-ab80-b13f25872d75",
+      "title": "",
+      "fullFile": "cypress/e2e/FirstTestScript.cy.js",
+      "file": "cypress/e2e/FirstTestScript.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "launch amazon app",
+          "fullTitle": "launch amazon app",
+          "timedOut": null,
+          "duration": 3489,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos\",\n  \"value\": \"cypress/e2e/FirstTestScript.cy.js\"\n}",
+          "code": "console.log(\"inside test case\");\nconsole.log(\"launching amazon application on browser\");\ncy.visit('https://www.amazon.in/');\n//application title\n//validation step\n//validate application title ---- expectedValue",
+          "err": {},
+          "uuid": "26ea7fad-d301-415e-922c-a743a96139a3",
+          "parentUUID": "0eea4371-7c24-40ea-ab80-b13f25872d75",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "26ea7fad-d301-415e-922c-a743a96139a3"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 3489,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochaTestRun",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "reportFilename": "mochaTestRun",
+        "charts": true,
+        "reportPageTitle": "Mocha Test Suite",
+        "html": false,
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

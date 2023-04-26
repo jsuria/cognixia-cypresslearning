@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-04-25T05:01:45.169Z",
+    "end": "2023-04-25T05:01:58.700Z",
+    "duration": 13531,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ba880d89-6693-4ca1-88c5-44994869d7ac",
+      "title": "",
+      "fullFile": "cypress/e2e/parentChild/amazon_homepage.cy.js",
+      "file": "cypress/e2e/parentChild/amazon_homepage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d5b203fb-c5a7-4599-af81-40ec0b05bd5c",
+          "title": "xpath - Click Shop Now",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "homepage",
+              "fullTitle": "xpath - Click Shop Now homepage",
+              "timedOut": null,
+              "duration": 10304,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos\",\n  \"value\": \"cypress/e2e/parentChild/amazon_homepage.cy.js\"\n}",
+              "code": "cy.visit(\"https://www.amazon.in\");\ncy.xpath('//h2[contains(text(),\"Bluetooth Calling\")]/parent::div/following-sibling::div/following-sibling::div/child::a').click();",
+              "err": {},
+              "uuid": "c1b96abf-8538-4978-9466-0cd9dd1da13a",
+              "parentUUID": "d5b203fb-c5a7-4599-af81-40ec0b05bd5c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c1b96abf-8538-4978-9466-0cd9dd1da13a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10304,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochaTestRun",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "reportFilename": "mochaTestRun",
+        "charts": true,
+        "reportPageTitle": "Mocha Test Suite",
+        "html": false,
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
