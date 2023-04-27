@@ -27,8 +27,11 @@
 require('cypress-xpath')
 require('cypress-iframe')
 require('@4tw/cypress-drag-drop')
+require('cypress-file-upload')
 
 import Login from '../e2e/classes/LoginPage'
+import Menu from '../e2e/classes/MenuPage'
+import Search from '../e2e/classes/SearchPage'
 
 Cypress.Commands.add('LoginToWebsite', (params) => {
     
@@ -64,7 +67,7 @@ Cypress.Commands.add('DragDropElement', (params) => {
 
 
 
-// Rajesh
+// Custom iframe handler command
 Cypress.Commands.add('customHandleIFrame', function(locatorFrame){
 
     return cy.get(locatorFrame)
@@ -72,6 +75,7 @@ Cypress.Commands.add('customHandleIFrame', function(locatorFrame){
             .then(cy.wrap)
 })
 
+// My command to load the iframe editor
 Cypress.Commands.add('IframeEditor', (params) => {
 
     cy.visit(params.url)
@@ -86,14 +90,41 @@ Cypress.Commands.add('IframeEditor', (params) => {
         .click()
 })
 
-Cypress.Commands.add('TestLoginPage', (params) => {
-    const loginPage = new Login()
+// Code for verifying the element text using promises
+Cypress.Commands.add('verifyElementText', (params) => {
+  cy.get(params.selector).then((elem) => {
+    expect(elem.text()).to.eq(params.text)
+  })
 
-    loginPage.enterEmail(params.email)
+})
+
+// Command running the login page test
+Cypress.Commands.add('TestLoginPage', (params) => {
+    const loginPage = new Login(params)
 
     //validation
-    cy.title().should('contain', params.title)
+    loginPage.checkLoginTitle()
+    loginPage.checkButtonText()
+    loginPage.login()
+    loginPage.checkDashboardTitle()
+})
 
-    loginPage.enterPassword(params.password)
-    loginPage.clickLoginButton(params.button)
+// Command running the customer menu test
+Cypress.Commands.add('TestCustomerMenu', (params) => {
+    const menuPage = new Menu(params)
+
+    // Find customer items menu and click
+    menuPage.clickParentMenu()
+    menuPage.clickChildMenuItem()
+
+})
+// Command running customer search
+Cypress.Commands.add('TestCustomerSearch', (params) => {
+    const searchPage = new Search(params) 
+    searchPage.search()
+})
+
+// Command running customer search
+Cypress.Commands.add('TestFileUpload', (params) => {
+  
 })

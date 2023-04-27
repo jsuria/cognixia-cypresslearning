@@ -1,0 +1,11 @@
+{
+    "file_name":"sample.txt",
+    "file_list":[
+        "Playwright_Course_Overview.pdf",
+        "sample.txt",
+        "sampleDemo.pdf"
+    ],
+    "input_file":"#file-upload",
+    "input_saveas":"my_new_name.txt",
+    "button":"#file-upload"
+}

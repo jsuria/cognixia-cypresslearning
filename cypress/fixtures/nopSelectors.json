@@ -1,0 +1,28 @@
+{
+    "login":{
+        "url":"https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F",
+        "username":"admin@yourstore.com",
+        "password":"admin",
+        "title_login": "Login",
+        "button": "button.button-1",
+        "button_text": "Log in",
+        "checkbox": "input#RememberMe[type='checkbox']",
+        "title_loggedin":"Dashboard / nopCommerce administration",
+        "input_email":"input#Email",
+        "input_password":"input#Password"
+    },
+    "menu":{
+        "parent_item":"//p[contains(text(),'Customers')]/parent::a[@href='#']",
+        "child_item":"//a[@href='/Admin/Customer/List']",
+        "text":"Customers",
+        "xpath":true
+    },
+    "search":{
+        "input_email":"//input[@id='SearchEmail']",
+        "input_value":"victoria_victoria@nopCommerce.com",
+        "button":"//button[@id='search-customers']",
+        "button_text":"Search",
+        "match_result":"//table[@id='customers-grid']/descendant::td[text()='victoria_victoria@nopCommerce.com']",
+        "xpath":true
+    }
+}

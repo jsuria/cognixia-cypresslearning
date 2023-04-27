@@ -8,7 +8,9 @@
     "execChromeHeaded": "npx cypress run --browser chrome --spec cypress/e2e/nopComm/midterm_nopcommerce.cy.js --headed --reporter mochawesome",
     "execChromeHeadless": "npx cypress run --browser chrome --spec cypress/e2e/nopComm/midterm_nopcommerce.cy.js --reporter mochawesome",
     "execFirefoxHeaded": "npx cypress run --browser firefox --spec cypress/e2e/nopComm/midterm_nopcommerce.cy.js --headed --reporter mochawesome",
-    "execFirefoxHeadless": "npx cypress run --browser firefox --spec cypress/e2e/nopComm/midterm_nopcommerce.cy.js --reporter mochawesome"
+    "execFirefoxHeadless": "npx cypress run --browser firefox --spec cypress/e2e/nopComm/midterm_nopcommerce.cy.js --reporter mochawesome",
+    "execFFHeadlessPOM": "npx cypress run --browser firefox --spec cypress/e2e/patterns/page_object.cy.js --reporter mochawesome",
+    "execGCHeadlessPOM": "npx cypress run --browser chrome --spec cypress/e2e/patterns/page_object.cy.js --reporter mochawesome"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,7 @@
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^2.2.3",
     "cypress": "^12.10.0",
+    "cypress-file-upload": "^5.0.8",
     "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "^3.4.0",
     "cypress-xpath": "^2.0.1"
