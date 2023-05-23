@@ -65,8 +65,6 @@ Cypress.Commands.add('DragDropElement', (params) => {
         .drag(params.drop_element, { force: params.force })
 })
 
-
-
 // Custom iframe handler command
 Cypress.Commands.add('customHandleIFrame', function(locatorFrame){
 

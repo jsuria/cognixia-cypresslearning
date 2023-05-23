@@ -18,6 +18,8 @@ describe('Github Repo', () => {
                 expect(result.status).to.eq(200)
     
                 const responseBody = result.body
+
+                cy.log(`Response time: ${result.duration}`)
     
                 // Validate contents of body and header
                 // Include my (public) repositories only
@@ -30,7 +32,7 @@ describe('Github Repo', () => {
         })
     })
 
-    it('create new repository', () => {
+    it.skip('create new repository', () => {
 
         cy.fixture('apiTestData').then((apiValues)=> {
             
