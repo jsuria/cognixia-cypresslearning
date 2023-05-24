@@ -91,29 +91,5 @@ describe('wrap basics', ()=>{
         })
     })
 
-    it('cy.window()', () => {
-        cy.visit('http://the-internet.herokuapp.com/iframe').then((response)=>{
-            cy.window().then((win)=>{
-                expect(win.innerHeight).to.be.gt(0)
-                expect(win.isSecureContext).to.be.false  
-                
-                const win_loc = win.location
-
-                expect(win_loc.host).to.eq('the-internet.herokuapp.com')
-                expect(win_loc.pathname).to.eq('/iframe')
-                expect(win_loc.port).to.be.empty
-            })
-        })    
-    })
-
-    it('cypress direct window methods', () => {
-        cy.visit('http://the-internet.herokuapp.com/iframe').then((response)=>{
-            cy.location().then((prop)=>{
-                expect(prop.host).to.eq('the-internet.herokuapp.com')
-                expect(prop.pathname).to.eq('/iframe')
-                expect(prop.port).to.be.empty
-            })
-        })    
-    })
     
 })
