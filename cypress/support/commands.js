@@ -126,3 +126,31 @@ Cypress.Commands.add('TestCustomerSearch', (params) => {
 Cypress.Commands.add('TestFileUpload', (params) => {
   
 })
+// Documentation in PDF inaccurate
+// This returns a chainable promise, not text
+//
+// To process, do cy.get('foo').getText().as('myVar')
+// Or, cy.get('foo').getText().then(data => /* do something with data */)
+//
+Cypress.Commands.add('getText', { prevSubject: 'element' }, (element) => {   
+    return cy.wrap(element).invoke('text')
+})
+
+Cypress.Commands.add('getLink', { prevSubject: 'optional'}, (subject, options) => { 
+  if(subject) {
+      // cy.get('').getLink()
+      cy.wrap(subject).then( ($ele) => {                       
+          cy.wrap($ele).find('a')
+      })
+  } else {
+      // cy.getLink()
+      cy.get('a')                                                
+  }
+})
+
+// Only use for edge cases
+// DO NOT USE UNLESS YOU KNOW WHAT YOU ARE DOING
+Cypress.Commands.overwrite('type', (originalFn, element, text, options) => { 
+    const clearedText = `{selectAll}{backspace}${text}`
+    return originalFn(element, clearedText, options)
+})
